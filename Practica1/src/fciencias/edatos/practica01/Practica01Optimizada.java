@@ -4,7 +4,7 @@ package fciencias.edatos.practica01;
  * Práctica Estructuras de Datos.
  * 
  * @author Erick Daniel Arrollo Martínez.
- * @author Cruz González Irvin Javie
+ * @author Cruz González Irvin Javier.
  * @version 1.0 Marzo 2021.
  * @since Laboratorio de Estructuras de Datos 2020-2.
  */

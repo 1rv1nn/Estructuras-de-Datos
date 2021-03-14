@@ -7,5 +7,4 @@ Author Cruz González Irvin Javier.
 
 Facultad de Ciencias UNAM.# Estructuras-de-Datos
 
-# Estructuras-de-datos
-# Estructuras-de-datos
+

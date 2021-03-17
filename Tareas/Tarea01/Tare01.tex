@@ -1,5 +1,5 @@
 \documentclass[a4paper,10pt]{article} 
-\usepackage[top=2cm,bottom=2cm,left=2cm,rigth=2cm,heightrounded]{geometry}
+\usepackage[top=1cm,bottom=2cm,left=1cm,rigth=1cm,heightrounded]{geometry}
 \usepackage[utf8]{inputenc}
 \usepackage{graphicx}
 \usepackage{multirow} 
@@ -19,20 +19,25 @@
 \usepackage[yyyymmdd]{datetime} 
 \renewcommand{\dateseparator}{-} 
 \usepackage{fancyhdr}
-\usepackage[table]{xcolor} 
-\usepackage{tabu}
-\usepackage[table]{xcolor}
+\usepackage{background}
+\usepackage{lipsum}
+\usepackage{tcolorbox}
+\usepackage{listings}
+\usepackage{minted}
 
-\makeatletter
-\newcommand{\xRightarrow}[2][]{\ext@arrow 0359\Rightarrowfill@{#1}{#2}}
-\makeatother
 
-\definecolor{sangria}{rgb}{0.57, 0.0, 0.04}
-\definecolor{olive}{rgb}{0.5, 0.5, 0.0}
-\definecolor{non-photoblue}{rgb}{0.64, 0.87, 0.93}
-\definecolor{lightpastelpurple}{rgb}{0.69, 0.61, 0.85}
-\pagecolor{black}
-\color{white}
+%colors
+\definecolor{antiquebrass}{rgb}{0.8, 0.58, 0.46}
+\definecolor{babypink}{rgb}{0.96, 0.76, 0.76}
+\definecolor{buff}{rgb}{0.94, 0.86, 0.51}
+
+\newlength\mylen
+\setlength\mylen{\dimexpr\paperwidth/38\relax}
+
+\SetBgScale{1}
+\SetBgAngle{0}
+\SetBgColor{black!13}
+\SetBgContents{\tikz{\draw[step=\mylen] (-.5\paperwidth,-.6\paperheight) grid (.9\paperwidth,2.98\paperheight);}}
 
 \pagestyle{fancy} 
 \fancyhead{}\renewcommand{\headrulewidth}{0pt} 
@@ -45,9 +50,9 @@
 \raggedright
 Equipo\\    
 \footnotesize 
-\colorbox[rgb]{0.64, 0.87, 0.93}{\textcolor{black}{Arollo Martínez Erick Daniel}}
-\\\colorbox[rgb]{0.69, 0.61, 0.85}{\textcolor{black}{Cruz González Irvin Javier}}
-\textcolor[rgb]{0.91, 1.0, 1.0}{\medskip\hrule}
+\colorbox[rgb]{0.94, 0.86, 0.51}{\textcolor{black}{Arollo Martínez Erick Daniel}}
+\\\colorbox[rgb]{0.96, 0.76, 0.76}{\textcolor{black}{Cruz González Irvin Javier}}
+\textcolor[rgb]{0.8, 0.58, 0.46}{\medskip\hrule}
 \end{minipage}
 \begin{minipage}{0.4\textwidth} 
 \centering 
@@ -55,7 +60,7 @@ Equipo\\
 \textbf{Estructuras de Datos }\\ 
 \normalsize 
 Complejidad Computacional\\
-Practica 1
+Tarea 1
 \end{minipage}
 \begin{minipage}{0.295\textwidth} 
 \raggedleft
@@ -63,12 +68,127 @@ Practica 1
 \footnotesize
 erickarrollo@ciencias.unam.mx
 1rv1n@ciencias.unam.mx
-\textcolor[rgb]{0.91, 1.0, 1.0}{\medskip\hrule}
+\textcolor[rgb]{0.8, 0.58, 0.46}{\medskip\hrule}
 \end{minipage}
 
 \begin{enumerate}
+    \item \textbf{Ejercicio 1}
+    
+     Calcula el tiempo de ejecución en el peor de los casos para los siguientes  métodos :
+            
+    \textbf{Problema 1}
+    %problema 1
+    \begin{lstlisting}[frame = single] 
+problema1(A){
+    suma = 0;
+    for(posicion = 1; i<= n; i++){  ->>>> n
+        suma = suma + A[posicion];  ->>>> 1+1+1+1=4 
+    }//end for
+    return suma;            ->>>>>4n
+}
+\end{lstlisting}
+
+    %solución
+    \textbf{\textcolor{red}{Solución:}} Entra al for con $n$ iteraciones,
+   
+    %problema2
+    \textbf{Problema 2}
+    \begin{lstlisting}[frame = single]
+public static int problema2(int n){
+    if(n != 0){
+        int x = n + 3;
+        int y = n + x + y;
+        return y;
+    }else{
+        return 10;
+    }
+}
+\end{lstlisting}
+
+    %problema3
+    \textbf{Problema 3}
+    \begin{lstlisting}[frame = single]
+public static int problema3(int n){
+    int x = 0;
+    for(int i = 0; i < n; i ++){
+       for(int j = 1; j < n; j++){
+           x++;
+       }
+    }
+    return x;
+}
+\end{lstlisting}
+
+
+    \item \textbf{Ejercicio 2}
+
+    Calcula el tiempo de ejecución en el peor de los casos para los siguientes métodos y determina su complejidad.  
+
+    %problema4
+    \textbf{Problema 4}
+    \begin{lstlisting}[frame = single]
+/*
+ * n es un entero postivo que ademas es potencia de 2
+ **/
+public static int problema4(int n){
+    int i = n;
+    int contador = 0;
+    while(i > 1){
+        i = i / 2;
+        contador++;
+    }
+    return contador
+}
+\end{lstlisting}
+
+\newpage
+
+%problema5
+ \textbf{Problema 5}
+\begin{lstlisting}[frame = single]
+public static int problema5(int t){
+int suma = 0;
+for(int i = 0; i < t; i++){
+    suma += problema5(i);
+}
+return suma;
+}
+\end{lstlisting}
+
+%problema6
+ \textbf{Problema 6}
+\begin{lstlisting}[frame = single]
+public int problema6(int n){
+int suma = 0;
+for(int i = 0; i < n; i++){
+    for(int j = n -1; j >=0 ; j++){
+        suma = suma  + problema6;
+    }
+}
+return suma;
+}
+\end{lstlisting}
+
+\item \textbf{Ejercicio 3}
+
+        \textbf{Definición:} Sean $f(n)$ y $g(n)$ funciones de complejidad. Decimos que $f(n)$ es $O-grande$ de $g(n)$ y $g(n)$ representa una cota asintótica superior para $f(n)$ si $\exists \: c \in \mathds{R^+}$  y $\exists \: n_0 \in \mathds{N}\cup \{0\}$ tales que $\forall _n\geq n_0 : 0 \leq f(n) \leq c \cdot g(n)$.\\
+
+        Demuestra cada uno de los siguientes ejercicios:
+        %problema7,8,9,10
+\begin{itemize}
+    \item Sea $T(n) = 5\sqrt{n} + 6n^2 $, P.D que $T(n) = 5\sqrt{n} + 6n^2 \in O(n^2) $
+    \item Sea $T(n) = 83 n^2 + 31 $, P.D que $T(n) = 83 n^2 + 31  \in O(n^2) $
+    \item Sea $T(n) = 53n + 3 log(n) $, P.D que $T(n) = 53n + 3 log(n)   \in O(n) $
+     \item Sea $T(n) = 37n^3 + n^2log(n) + 37 $, P.D que $T(n) =  37n^3 + n^2log(n) + 37  \in O(n^3) $
+    
+\end{itemize}
+
+
+
+
+
+
 
 
 \end{enumerate}
-
 \end{document}

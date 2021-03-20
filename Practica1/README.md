@@ -7,7 +7,7 @@ N°Cuenta:317161982
 Practica 01
 Complejidad Computacional.
 
-   DESCRIPCIÓN.Practica que en base de algóritmos dados se intento de mejorar la complejidad                     de cada uno de estos.
+   DESCRIPCIÓN.Practica que en base de algoritmos dados se intento de mejorar la complejidad                     de cada uno de estos.
 
 
    OBSERVACIONES IMPORTANTES.
@@ -24,7 +24,7 @@ Complejidad Computacional.
 
   COMENTARIOS EXTRA Y ORGANIZACIÓN DEL EQUIPO. 
 
-                   La colaboración y organización de la practica se hizo a traves de un reposito en github (consultar repositorio,https://github.com/1rv1nn/Estructuras-de-datos/tree/master/Practica1 ) los algoritmos implementados en su encabezado indican el nombre del alumno que lo implemento.
+                   La colaboración y organización de la practica se hizo a traves de un repositorio en github (consultar repositorio,https://github.com/1rv1nn/Estructuras-de-datos/tree/master/Practica1 ) los algoritmos implementados en su encabezado indican el nombre del alumno que lo implemento.
 
                            Algoritmos -> Erick e Irvin
                            Test -> Erick e Irvin

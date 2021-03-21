@@ -19,7 +19,11 @@ Complejidad Computacional.
 
                   3.Para el método isSudoku se implementaron 2 métodos auxiliares.
 
-                  4.Algunos tiempos en el archivo Practica01.java se encuentran comentados.
+                  4.Los tiempos en el archivo Practica01.java se encuentran comentados.
+
+                  5.En el archivo Practica01Optimizada se encuentran los tiempos promedios de los 
+                    métodos más sin embargo en el test se encuentra de cada uno de los métodos 
+                    solicitados.
 
 
   COMENTARIOS EXTRA Y ORGANIZACIÓN DEL EQUIPO. 

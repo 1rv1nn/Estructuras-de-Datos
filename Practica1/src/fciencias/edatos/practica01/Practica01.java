@@ -100,8 +100,8 @@ public class Practica01 {
         int[] ejemplo1b = { 4, 2, 7, 5, 4, 3, 7, 2, 5, 3, 4, 1 };
         int[] ejemplo1c = { 3, 2, 1, 4, 2 };
 
-        // int[] resultado1a = findFirstAndLast(ejemplo1a, 2);
-        // System.out.println("[" + resultado1a[0] + ", " + resultado1a[1] + "]");
+        int[] resultado1a = findFirstAndLast(ejemplo1a, 2);
+        System.out.println("[" + resultado1a[0] + ", " + resultado1a[1] + "]");
 
         // int[] resultado1b = findFirstAndLast(ejemplo1b, 67);
         // System.out.println("[" + resultado1b[0] + ", " + resultado1b[1] + "]");
@@ -120,17 +120,17 @@ public class Practica01 {
         int[][] ejemplo2a = { { 4, 5, 6, 2, 3, 1 }, { 3, 1, 2, 6, 4, 5 }, { 1, 6, 4, 3, 5, 2 }, { 5, 2, 3, 1, 6, 4 },
                 { 2, 3, 5, 4, 1, 6 }, { 6, 4, 1, 5, 2, 3 } };
 
-        // int[][] ejemplo2b = { { 4, 5, 6, 2, 3, 1 }, { 3, 1, 2, 6, 4, 5 }, { 2, 6, 4,
-        // 3, 5, 2 }, { 5, 2, 3, 1, 6, 4 },
-        // { 1, 3, 5, 4, 1, 6 }, { 6, 4, 1, 5, 2, 3 } };
-        long inicialB = System.currentTimeMillis();
+        int[][] ejemplo2b = { { 4, 5, 6, 2, 3, 1 }, { 3, 1, 2, 6, 4, 5 }, { 2, 6, 4, 3, 5, 2 }, { 5, 2, 3, 1, 6, 4 },
+                { 1, 3, 5, 4, 1, 6 }, { 6, 4, 1, 5, 2, 3 } };
+        // long inicialB = System.currentTimeMillis();
         boolean resultado2a = isSudokuValid(ejemplo2a);
         System.out.println("El sudoku 1 es válido: " + resultado2a);
-        long finB = System.currentTimeMillis();
-        System.out.println("El algoritmo 1 tarda " + (finB - inicialB) + " nanosegundos");
+        // long finB = System.currentTimeMillis();
+        // System.out.println("El algoritmo 1 tarda " + (finB - inicialB) + "
+        // nanosegundos");
 
-        // boolean resultado2b = isSudokuValid(ejemplo2b);
-        // System.out.println("El sudoku 2 es válido: " + resultado2b);
+        boolean resultado2b = isSudokuValid(ejemplo2b);
+        System.out.println("El sudoku 2 es válido: " + resultado2b);
 
         // EJEMPLOS DE ACTIVIDAD 3
         System.out.println("\nEJEMPLOS DE ACTIVIDAD 3");
@@ -140,24 +140,25 @@ public class Practica01 {
         rotateArray(ejemplo1c, 2);
 
         System.out.println("Arreglo 1 rotado 5 veces");
-        long inicialc = System.currentTimeMillis();
+        // long inicialc = System.currentTimeMillis();
         for (int i : ejemplo1a)
             System.out.print(i + " ");
-        long finc = System.currentTimeMillis();
-        System.out.println("\nEl algoritmo 1 tarda " + (finc - inicialc) + " nanosegundos");
+        // long finc = System.currentTimeMillis();
+        // System.out.println("\nEl algoritmo 1 tarda " + (finc - inicialc) + "
+        // nanosegundos");
 
-        // System.out.println("\nArreglo 2 rotado 0 veces");
+        System.out.println("\nArreglo 2 rotado 0 veces");
         // long inicial2 = System.currentTimeMillis();
-        // for (int i : ejemplo1b)
-        // System.out.print(i + " ");
+        for (int i : ejemplo1b)
+            System.out.print(i + " ");
         // long fin2 = System.currentTimeMillis();
         // System.out.println("\n \n El algoritmo 1 tarda " + (fin2 - inicial2) + "
         // nanosegundos");
 
-        // System.out.println("\nArreglo 3 rotado 2 veces");
+        System.out.println("\nArreglo 3 rotado 2 veces");
         // long inicial3 = System.currentTimeMillis();
-        // for (int i : ejemplo1c)
-        // System.out.print(i + " ");
+        for (int i : ejemplo1c)
+            System.out.print(i + " ");
         // long fin3 = System.currentTimeMillis();
         // System.out.println("\n \n El algoritmo 1 tarda " + (fin3 - inicial3) + "
         // nanosegundos");

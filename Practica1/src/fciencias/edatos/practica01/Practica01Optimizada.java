@@ -102,7 +102,7 @@ public class Practica01Optimizada {
      *                que una colunma de la matriz es valida
      */
 
-    /* Algoritmo de Erick */
+    /* Algoritmo de Erick-Sudoku */
     public static boolean columnas(int[][] pruebas, int asi) {
         int[] auxiliar = { 1, 2, 3, 4, 5, 6 };
         int contador = 0;
@@ -253,28 +253,28 @@ public class Practica01Optimizada {
         System.out.println(" El sudoku 1 es válido: " + resultadoDosA);
         System.out.println(" El sudoku 2 es válido: " + resultadoDosB);
         long finDos = System.currentTimeMillis();
-        System.out.println(" El algoritmo 2 tarda " + (finDos - inicialDos) + " nanosegundos");
+        System.out.println(
+                " El algoritmo 2 tarda " + (finDos - inicialDos) + " nanosegundos en promedio con los 2 métodos");
 
         // ACTIVIDAD 3
 
-        proRotate(ejemplo1a, 5);
-        proRotate(ejemplo1b, 0);
-        proRotate(ejemplo1c, 2);
-
+        int a[] = proRotate(ejemplo1a, 5);
+        int b[] = proRotate(ejemplo1b, 0);
+        int c[] = proRotate(ejemplo1c, 2);
+        long inicial2 = System.currentTimeMillis();
         System.out.println("\n ACTIVIDAD 3");
         System.out.println(" Arreglo 1 rotado 5 veces");
-        long inicial2 = System.currentTimeMillis();
-        for (int i : ejemplo1a)
-            System.out.print(i + " ");
-
-        System.out.println("\n Arreglo 2 rotado 0 veces");
-        for (int i : ejemplo1b)
-            System.out.print(i + " ");
-        System.out.println("\n Arreglo 3 rotado 2 veces");
-        for (int i : ejemplo1c)
+        for (int i : a)
             System.out.print(i + " ");
         long fin2 = System.currentTimeMillis();
-        System.out.println("\n El algoritmo 2 tarda " + (fin2 - inicial2) + " nanosegundos");
+        System.out.println("\n Arreglo 2 rotado 0 veces");
+        for (int i : b)
+            System.out.print(i + " ");
+        System.out.println("\n Arreglo 3 rotado 2 veces");
+        for (int i : c)
+            System.out.print(i + " ");
+        System.out.println(
+                "\n El algoritmo 2 tarda " + (fin2 - inicial2) + " nanosegundos en promedio con los 3 métodos");
 
     }
 }

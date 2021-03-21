@@ -56,7 +56,7 @@ Equipo\\
 \large 
 \textbf{Estructuras de Datos}\\ 
 \normalsize 
-Complejidad Computacional\\Tarea 01\\
+Complejidad Computacional\\Practica 01\\
 \end{minipage}
 \begin{minipage}{0.295\textwidth} 
 \raggedleft
@@ -85,7 +85,7 @@ erickarrollo@ciencias.unam.mx
         \end{table}
 
         \begin{tcolorbox}[colback=black!20!black,colframe=cyan!85!black]
-           \textcolor{white}{ \textbf{Justificación.\\}El algoritmo 2 que se implemento consta de un solo for anidando if-else por lo que esta última estructura de control tiene una complejidad $O(n)$,
+           \textcolor{white}{ \textbf{Justificación.\\}El algoritmo 2 que se implemento consta de un solo for anidando if-else por lo que esta última estructura de control tiene una complejidad $O(1)$,
                              disminuyendo considerablemente la complejidad que se tenía al inicio,y aproximandose a $O(n/2)$.}
           \end{tcolorbox}
         
@@ -105,7 +105,7 @@ erickarrollo@ciencias.unam.mx
 
             \begin{tcolorbox}[colback=black!20!black,colframe=sangria!85!black]
                 \textcolor{white}{ \textbf{Justificación.\\}EL algoritmo 2 que se implemento consta de métodos auxiliares utilizando un solo for con if-else por lo que 
-                                    sus complejidades son $O(n)$ y al implementar el método isSudokuValid se sumo estas dichas complejidades,generando así una complejidad $O(n)$ }
+                                    sus complejidades son $O(n)$ y al implementar el método isSudokuValid se sumaron y multiplicaron estas dichas complejidades,generando así una complejidad $O(n^{2})$ }
                \end{tcolorbox} 
                
                
@@ -117,14 +117,15 @@ erickarrollo@ciencias.unam.mx
                 \multicolumn{3}{|c|}{rotateArray} \\ \hline
                 Entradas & Milisegundos algoritmo 1 & Milisegundos algoritmo 2 \\
                 \hline \hline
-                [1,4,2,1,6,2,9], 5 & \hspace{1.3cm}{$\approx 37$}  & \hspace{1.3cm}{$\approx _$} \\ \hline
-                [4,2,7,5,4,3,7,2,5,3,4,1], 0 & \hspace{1.3cm}{$\approx 37$} & \hspace{1.3cm}{$\approx _$} \\ \hline
-                [3,2,1,4,2], 2 & \hspace{1.3cm}{$\approx 37$} & \hspace{1.3cm}{$\approx _$} \\ \hline
+                [1,4,2,1,6,2,9], 5 & \hspace{1.3cm}{$\approx 37$}  & \hspace{1.3cm}{$\approx 6$} \\ \hline
+                [4,2,7,5,4,3,7,2,5,3,4,1], 0 & \hspace{1.3cm}{$\approx 37$} & \hspace{1.3cm}{$\approx 1$} \\ \hline
+                [3,2,1,4,2], 2 & \hspace{1.3cm}{$\approx 37$} & \hspace{1.3cm}{$\approx 1$} \\ \hline
                 \end{tabular}
                 \end{table}  
                 
                 \begin{tcolorbox}[colback=black!20!black,colframe=green(ncs)!85!black]
-                    \textcolor{white}{ \textbf{Justificación.}}
+                    \textcolor{white}{ \textbf{Justificación.\\}El algoritmo 2 se implemento a base de de if-else y un for teniendo una complejidad $O(1)$ y 
+                                      $O(n)$ respectivamente, dando como resultado la complejidad requerida $O(n)$.}
                    \end{tcolorbox} 
                        
                  
